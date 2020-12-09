@@ -41,6 +41,20 @@ namespace AdventOfCode2020.Challenges
             return validCount;
         }
 
+        public int GetValidPasswordRule2Count()
+        {
+            int validCount = 0;
+            foreach (var passwordRuleAndPassword in passwordRulesAndPasswordPairs)
+            {
+                if (VerifyPasswordAgainstRule2(passwordRuleAndPassword.Key, passwordRuleAndPassword.Value))
+                {
+                    validCount++;
+                }
+            }
+
+            return validCount;
+        }
+
         public bool VerifyPasswordAgainstRule(string rule, string password)
         {
             int dashIndex = rule.IndexOf("-");
@@ -50,6 +64,19 @@ namespace AdventOfCode2020.Challenges
             char checkChar = rule[firstSpaceIndex+1];
             int actualCount = password.ToCharArray().Count(c => c == checkChar);
             return actualCount >= minChars && actualCount <= maxChars;
+        }
+
+        public bool VerifyPasswordAgainstRule2(string rule, string password)
+        {
+            int dashIndex = rule.IndexOf("-");
+            int firstSpaceIndex = rule.IndexOf(" ");
+            int firstIndex = int.Parse(rule.Substring(0, dashIndex)) - 1;
+            int secondIndex = int.Parse(rule.Substring(dashIndex + 1, firstSpaceIndex - dashIndex)) - 1;
+            char checkChar = rule[firstSpaceIndex + 1];
+            bool firstMatches = password[firstIndex] == checkChar;
+            bool secondMatches = password[secondIndex] == checkChar;
+
+            return firstMatches ^ secondMatches;
         }
     }
 }
