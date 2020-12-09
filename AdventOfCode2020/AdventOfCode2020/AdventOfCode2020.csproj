@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="Challenges\files\daytwodata.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Challenges\files\dayonedata.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
