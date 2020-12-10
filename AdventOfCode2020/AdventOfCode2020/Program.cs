@@ -14,9 +14,20 @@ namespace AdventOfCode2020
             Console.WriteLine("Day one part two challenge result= " + result);
             var passwords = new Passwords();
             result = passwords.GetValidPasswordCount();
-            Console.WriteLine("Day three part one challenge result= " + result);
+            Console.WriteLine("Day two part one challenge result= " + result);
             result = passwords.GetValidPasswordRule2Count();
+            Console.WriteLine("Day two part two challenge result= " + result);
+            Trees trees = new Trees();
+            result = trees.GetTreeCount(1, 3);
+            Console.WriteLine("Day three part one challenge result= " + result);
+            var a = trees.GetTreeCount(1, 1);
+            var b = result;
+            var c = trees.GetTreeCount(1, 5);
+            var d = trees.GetTreeCount(1, 7);
+            var e = trees.GetTreeCount(2, 1);
+            result = a * b * c * d * e;
             Console.WriteLine("Day three part two challenge result= " + result);
+
         }
     }
 }
