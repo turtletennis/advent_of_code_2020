@@ -30,8 +30,10 @@ namespace AdventOfCode2020
             Console.WriteLine("Day three part two challenge result= " + result);
             List<string> requiredPassportFields = new List<string>(new string[]{ "byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"});
             PassportValidator passports = new PassportValidator();
-            result = passports.CountValidPassports(requiredPassportFields);
+            result = passports.CountValidPassports(requiredPassportFields,false);
             Console.WriteLine("Day four part one challenge result= " + result);
+            result = passports.CountValidPassports(requiredPassportFields, true);
+            Console.WriteLine("Day four part two challenge result= " + result);
         }
     }
 }
