@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using AdventOfCode2020.Challenges;
-using AdventOfCode2020.Challenges.files;
 
 namespace AdventOfCode2020
 {

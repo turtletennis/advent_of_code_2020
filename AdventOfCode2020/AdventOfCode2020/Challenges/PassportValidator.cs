@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace AdventOfCode2020.Challenges.files
+namespace AdventOfCode2020.Challenges
 {
     public class PassportValidator
     {
