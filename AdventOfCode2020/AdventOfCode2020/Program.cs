@@ -34,6 +34,9 @@ namespace AdventOfCode2020
             Console.WriteLine("Day four part one challenge result= " + result);
             result = passports.CountValidPassports(requiredPassportFields, true);
             Console.WriteLine("Day four part two challenge result= " + result);
+            SeatPartitioning seatPartitioning = new SeatPartitioning();
+            result = seatPartitioning.GetMaxSeatId();
+            Console.WriteLine("Day five part one challenge result= " + result);
         }
     }
 }
