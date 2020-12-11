@@ -35,6 +35,11 @@ namespace AdventOfCode2020.Challenges
                     passport = new Dictionary<string, string>();
                 }
             }
+
+            if (lines[lines.Length-1] != "")
+            {
+                passports.Add(passport);
+            }
         }
 
         public int CountValidPassports(List<string> requiredFields)
