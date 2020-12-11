@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using AdventOfCode2020.Challenges;
+using AdventOfCode2020.Challenges.files;
 
 namespace AdventOfCode2020
 {
@@ -27,7 +29,10 @@ namespace AdventOfCode2020
             var e = trees.GetTreeCount(2, 1);
             result = a * b * c * d * e;
             Console.WriteLine("Day three part two challenge result= " + result);
-
+            List<string> requiredPassportFields = new List<string>(new string[]{ "byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"});
+            PassportValidator passports = new PassportValidator();
+            result = passports.CountValidPassports(requiredPassportFields);
+            Console.WriteLine("Day four part one challenge result= " + result);
         }
     }
 }
