@@ -39,6 +39,9 @@ namespace AdventOfCode2020
             Console.WriteLine("Day five part one challenge result= " + result);
             result = seatPartitioning.GetMySeatId();
             Console.WriteLine("Day five part two challenge result= " + result);
+            Questions questions = new Questions();
+            result = questions.GetTotalGroupYesCount();
+            Console.WriteLine("Day six part one challenge result= " + result);
         }
     }
 }
