@@ -42,6 +42,8 @@ namespace AdventOfCode2020
             Questions questions = new Questions();
             result = questions.GetTotalGroupYesCount();
             Console.WriteLine("Day six part one challenge result= " + result);
+            result = questions.GetSumOfUnanimousYesCount();
+            Console.WriteLine("Day six part two challenge result= " + result);
         }
     }
 }
