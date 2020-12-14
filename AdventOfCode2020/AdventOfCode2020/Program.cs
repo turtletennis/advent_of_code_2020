@@ -37,6 +37,8 @@ namespace AdventOfCode2020
             SeatPartitioning seatPartitioning = new SeatPartitioning();
             result = seatPartitioning.GetMaxSeatId();
             Console.WriteLine("Day five part one challenge result= " + result);
+            result = seatPartitioning.GetMySeatId();
+            Console.WriteLine("Day five part two challenge result= " + result);
         }
     }
 }

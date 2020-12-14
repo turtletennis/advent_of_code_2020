@@ -40,6 +40,35 @@ namespace AdventOfCode2020.Challenges
             return maxId;
         }
 
+        public int GetMySeatId()
+        {
+            bool[] filledSeats = new bool[128*8];
+
+            for (int i = 0; i < rowStrings.Count; i++)
+            {
+                int row = SeatToInt(rowStrings[i]);
+                int column = SeatToInt(columnStrings[i]);
+                int id = row * 8 + column;
+                filledSeats[id] = true;
+            }
+
+            int myId = -1;
+            for (int i = 1; i < filledSeats.Length-1; i++)
+            {
+                //adjacent seats are filled
+                if (filledSeats[i - 1] && filledSeats[i + 1])
+                {
+                    //my seat isn't filled
+                    if (!filledSeats[i])
+                    {
+                        myId = i;
+                        break;
+                    }
+                }
+            }
+            return myId;
+        }
+
         private int SeatToInt(string seatRowOrColumn)
         {
             string bits = "";
