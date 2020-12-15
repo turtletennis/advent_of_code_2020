@@ -9,6 +9,9 @@
     <None Update="Challenges\files\daysevendata.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Challenges\files\dayeightdata.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Challenges\files\daysixdata.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
