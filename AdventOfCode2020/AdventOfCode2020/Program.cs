@@ -44,6 +44,11 @@ namespace AdventOfCode2020
             Console.WriteLine("Day six part one challenge result= " + result);
             result = questions.GetSumOfUnanimousYesCount();
             Console.WriteLine("Day six part two challenge result= " + result);
+            ColouredBags colouredBags = new ColouredBags();
+            result = colouredBags.GetCountOfBagTypesContainingAColouredBag("shiny gold");
+            Console.WriteLine("Day seven part one challenge result= " + result);
+            result = colouredBags.CountBagsWithinBagColour("shiny gold");
+            Console.WriteLine("Day seven part two challenge result= " + result);
         }
     }
 }
