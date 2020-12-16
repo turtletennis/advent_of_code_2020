@@ -54,6 +54,9 @@ namespace AdventOfCode2020
             Console.WriteLine("Day eight part one challenge result= " + result);
             result = bootLoader.GetAccumulatorValueFromFixedProgram();
             Console.WriteLine("Day eight part two challenge result= " + result);
+            XmasDecoder xmasDecoder = new XmasDecoder();
+            result = xmasDecoder.FindFirstInvalidNumber();
+            Console.WriteLine("Day nine part one challenge result= " + result);
         }
     }
 }
