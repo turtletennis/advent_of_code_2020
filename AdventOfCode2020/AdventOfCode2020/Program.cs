@@ -57,6 +57,8 @@ namespace AdventOfCode2020
             XmasDecoder xmasDecoder = new XmasDecoder();
             result = xmasDecoder.FindFirstInvalidNumber();
             Console.WriteLine("Day nine part one challenge result= " + result);
+            long minMaxSum = xmasDecoder.GetSumOfHighestAndLowestNumbersFromContiguousSetSummingTo(result);
+            Console.WriteLine("Day nine part two challenge result= " + minMaxSum);
         }
     }
 }

@@ -52,5 +52,39 @@ namespace AdventOfCode2020.Challenges
             }
             return currentNumber;
         }
+
+        public long GetSumOfHighestAndLowestNumbersFromContiguousSetSummingTo(long expectedSum)
+        {
+            List<long> set = numbers.Take(2).ToList();
+            bool found = false;
+            int lineNo = 2;
+            while (!found && lineNo < numbers.Length)
+            {
+                long setSum = set.Sum();
+                if (setSum == expectedSum)
+                {
+                    found = true;
+                    break;
+                }
+                else if (setSum > expectedSum)
+                {
+                    //set has exceeded our some, start again from the second number in our current set
+                    lineNo -= set.Count-1;
+                    set = numbers.Skip(lineNo).Take(2).ToList();
+                    lineNo+=2;
+                }
+                else
+                {
+                    set.Add(numbers[lineNo]);
+                    lineNo++;
+                }
+                
+            }
+
+            
+            return set.Min() + set.Max();
+        }
+
+        
     }
 }
