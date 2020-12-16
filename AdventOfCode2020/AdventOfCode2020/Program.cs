@@ -49,6 +49,11 @@ namespace AdventOfCode2020
             Console.WriteLine("Day seven part one challenge result= " + result);
             result = colouredBags.CountBagsWithinBagColour("shiny gold");
             Console.WriteLine("Day seven part two challenge result= " + result);
+            BootLoader bootLoader = new BootLoader();
+            result = bootLoader.GetAccumulatorValueWhenInfiniteLoopHit();
+            Console.WriteLine("Day eight part one challenge result= " + result);
+            result = bootLoader.GetAccumulatorValueFromFixedProgram();
+            Console.WriteLine("Day eight part two challenge result= " + result);
         }
     }
 }
