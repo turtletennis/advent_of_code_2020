@@ -59,6 +59,9 @@ namespace AdventOfCode2020
             Console.WriteLine("Day nine part one challenge result= " + result);
             long minMaxSum = xmasDecoder.GetSumOfHighestAndLowestNumbersFromContiguousSetSummingTo(result);
             Console.WriteLine("Day nine part two challenge result= " + minMaxSum);
+            JoltAdapters joltAdapters = new JoltAdapters();
+            result = joltAdapters.GetOneJoltMultipliedByThreeJoltDiffences();
+            Console.WriteLine("Day ten part one challenge result= " + result);
         }
     }
 }
