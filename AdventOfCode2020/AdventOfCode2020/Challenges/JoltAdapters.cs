@@ -49,5 +49,34 @@ namespace AdventOfCode2020.Challenges
 
         }
 
+        public long GetTotalNumberOfValidAdapterCombinations()
+        {
+
+            return GetCombinations(6);
+        }
+
+        private long GetCombinations(long target)
+        {
+            long combinations = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                long currentNum = numbers[i];
+                if (currentNum + 4 > target)
+                {
+                    if (currentNum < target)
+                    {
+                        combinations += GetCombinations(currentNum);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                
+            }
+
+            return combinations;
+        }
+
     }
 }

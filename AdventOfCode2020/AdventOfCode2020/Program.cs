@@ -62,6 +62,8 @@ namespace AdventOfCode2020
             JoltAdapters joltAdapters = new JoltAdapters();
             result = joltAdapters.GetOneJoltMultipliedByThreeJoltDiffences();
             Console.WriteLine("Day ten part one challenge result= " + result);
+            result = joltAdapters.GetTotalNumberOfValidAdapterCombinations();
+            Console.WriteLine("Day ten part two challenge result= " + result);
         }
     }
 }
